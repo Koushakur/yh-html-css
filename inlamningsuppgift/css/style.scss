@@ -1,0 +1,208 @@
+* {
+   box-sizing: border-box;
+}
+
+$color-button: #f9d783;
+$color-accent-dark: #edcf87;
+$color-accent-blue: #beebff;
+$button-height: 48px;
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   color: #191919;
+   box-sizing: border-box;
+}
+
+h4 {
+   font-weight: 700;
+   font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+p {
+   font-family: 'Atkinson Hyperlegible', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li {
+   text-align: left;
+   font-family: 'Atkinson Hyperlegible', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+   height: $button-height;
+   border-width: 0px;
+   border-radius: calc($button-height / 2);
+   padding: 0px 25px;
+
+   font-family: 'Inter', sans-serif;
+   font-weight: 600;
+
+   transition-duration: 0.4s;
+
+   &.btn-black {
+      background-color: #191919;
+      color: white;
+
+      &:hover {
+         background-color: white;
+         color: #191919;
+      }
+   }
+
+   &.btn-white {
+      background-color: white;
+
+      &:hover {
+         background-color: black;
+         color: white;
+      }
+   }
+
+   &.btn-orange {
+      background-color: $color-button;
+
+      &:hover {
+         background-color: #191919;
+         color: white;
+      }
+   }
+
+   &.btn-transparent {
+      background-color: transparent;
+      border: 1px solid black;
+
+      &:hover {
+         background-color: $color-button;
+      }
+   }
+
+   &.login {
+      padding: 0px 45px;
+   }
+}
+
+main {
+   height: 100%;
+   width: 100%;
+
+   .partners {
+      display: flex;
+      justify-content: space-around;
+   }
+}
+
+header {
+   background-color: #f0efe9;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+
+   padding: 1rem;
+
+   .header {
+      display: flex;
+
+      .logo {
+         display: flex;
+         margin-right: 50px;
+
+         align-items: center;
+      }
+
+      .csna {
+         display: flex;
+         flex-direction: column;
+         // justify-content: space-between;
+         // align-content: space-around;
+
+         .contact-social {
+            display: flex;
+            justify-content: space-between;
+            border: solid #ded9d7;
+            border-width: 0px 0px 1px;
+            padding-bottom: 10px;
+
+            .contact {
+               color: #49494d;
+               font-size: 15px;
+               font-weight: 300;
+               display: flex;
+               align-items: center;
+               gap: 20px;
+            }
+
+            .social {
+               display: flex;
+               gap: 20px;
+
+               font-size: 1.5em;
+
+               a {
+                  color: inherit;
+                  transition-duration: 0.4s;
+
+                  &:hover {
+                     color: $color-accent-dark;
+                  }
+               }
+
+            }
+         }
+
+         .navigation-account {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+            nav {
+               display: flex;
+               gap: 30px;
+
+               font-size: 16px;
+               font-weight: 600;
+
+               a {
+                  color: inherit;
+                  text-decoration: none;
+
+                  &.current {
+                     text-decoration: underline;
+                     text-decoration-style: double;
+                  }
+
+                  &:hover {
+                     text-decoration: underline;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+footer {
+   // width: 100%;
+   height: 3rem;
+
+   border: solid black;
+   border-width: 1px 0px 0px;
+   // padding: 1rem;
+
+   bottom: 0;
+
+   display: flex;
+
+   justify-content: center;
+   align-items: center;
+
+
+   a {
+      color: rgb(133, 133, 133);
+
+      &:hover {
+         color: rgb(184, 184, 184);
+      }
+   }
+}
