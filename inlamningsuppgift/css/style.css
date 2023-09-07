@@ -7,6 +7,10 @@ body {
   height: 100%;
   color: #191919;
 }
+html a,
+body a {
+  text-decoration: none;
+}
 
 header {
   background-color: #f0efe9;
@@ -85,15 +89,33 @@ main {
 }
 main .showcase {
   background-color: #f0efe9;
+  padding-top: 2rem;
+  background-image: url("../img/background/background-lines.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  animation: bg-size-bounce 10s infinite ease-in-out, bg-enter-left 1s ease-in-out;
 }
 main .showcase .container {
+  animation: enter-right 0.8s ease-in-out;
   display: flex;
-  justify-content: space-between;
-  color: #191919;
 }
-main .showcase .container div {
-  padding: 1rem;
-  width: 50%;
+main .showcase .container .jumbo {
+  margin-top: 90px;
+}
+main .showcase .container h1 {
+  font-family: "Inter bold", sans-serif;
+  font-size: 5em;
+  font-weight: 700;
+}
+main .showcase .container p {
+  color: #5b5b5b;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+main .partners {
+  padding-top: 6rem;
+  animation: enter-bottom 1s ease-in-out;
 }
 main .partners .container {
   display: flex;
@@ -121,9 +143,9 @@ p {
 }
 
 button {
-  height: 48px;
-  border-width: 0px;
-  border-radius: 24px;
+  height: 3.5rem;
+  border-radius: 1.75rem;
+  border: 1px solid transparent;
   padding: 0px 25px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -141,7 +163,7 @@ button.btn-white {
   background-color: white;
 }
 button.btn-white:hover {
-  background-color: black;
+  background-color: #191919;
   color: white;
 }
 button.btn-orange {
@@ -156,8 +178,60 @@ button.btn-transparent {
   border: 1px solid black;
 }
 button.btn-transparent:hover {
-  background-color: #f9d783;
+  border: 1px solid #f9d783;
+  color: white;
+  background-color: black;
 }
 button.login {
   padding: 0px 39px;
+}
+
+@keyframes enter-right {
+  0% {
+    translate: 100vw;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+@keyframes enter-left {
+  0% {
+    translate: -100vw;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+@keyframes enter-bottom {
+  0% {
+    translate: 0 100%;
+    opacity: 0;
+  }
+}
+@keyframes bounce-updown {
+  0% {
+    translate: 0 0vh;
+  }
+  50% {
+    translate: 0 -2vh;
+  }
+  100% {
+    translate: 0 0vh;
+  }
+}
+@keyframes bg-enter-left {
+  0% {
+    background-position-x: -100vw;
+  }
+}
+@keyframes bg-size-bounce {
+  0% {
+    background-size: 42% auto;
+  }
+  50% {
+    background-size: 39% auto;
+  }
+  100% {
+    background-size: 42% auto;
+  }
 }

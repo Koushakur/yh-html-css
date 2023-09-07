@@ -7,12 +7,18 @@ $color-darker-yellow: #edcf87;
 $color-accent-blue: #beebff;
 $color-nearly-black: #191919;
 $color-background-grey: #f0efe9;
-$button-height: 48px;
+
+$button-height: 3.5rem;
+// $button-height: 52px;
 
 html,
 body {
    height: 100%;
    color: $color-nearly-black;
+
+   a {
+      text-decoration: none;
+   }
 }
 
 header {
@@ -110,20 +116,41 @@ main {
 
    .showcase {
       background-color: $color-background-grey;
+      padding-top: 2rem;
+
+      background-image: url("../img/background/background-lines.svg");
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      animation: bg-size-bounce 10s infinite ease-in-out,
+         bg-enter-left 1.0s ease-in-out;
 
       .container {
+         animation: enter-right 0.8s ease-in-out;
          display: flex;
-         justify-content: space-between;
-         color: $color-nearly-black;
 
-         div {
-            padding: 1rem;
-            width: 50%;
+         .jumbo {
+            margin-top: 90px;
+         }
+
+         h1 {
+            font-family: 'Inter bold', sans-serif;
+            font-size: 5em;
+            font-weight: 700;
+         }
+
+         p {
+            color: #5b5b5b;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
          }
       }
    }
 
    .partners {
+      padding-top: 6rem;
+      animation: enter-bottom 1s ease-in-out;
+
       .container {
          display: flex;
          justify-content: space-around;
@@ -146,7 +173,6 @@ footer {
    justify-content: center;
    align-items: center;
 
-
    a {
       color: rgb(133, 133, 133);
 
@@ -163,8 +189,8 @@ p {
 
 button {
    height: $button-height;
-   border-width: 0px;
    border-radius: calc($button-height / 2);
+   border: 1px solid transparent;
    padding: 0px 25px;
 
    font-family: 'Inter', sans-serif;
@@ -173,12 +199,12 @@ button {
    transition-duration: 0.4s;
 
    &.btn-black {
-      background-color: #191919;
+      background-color: $color-nearly-black;
       color: white;
 
       &:hover {
          background-color: white;
-         color: #191919;
+         color: $color-nearly-black;
       }
    }
 
@@ -186,7 +212,7 @@ button {
       background-color: white;
 
       &:hover {
-         background-color: black;
+         background-color: $color-nearly-black;
          color: white;
       }
    }
@@ -195,7 +221,7 @@ button {
       background-color: $color-yellow;
 
       &:hover {
-         background-color: #191919;
+         background-color: $color-nearly-black;
          color: white;
       }
    }
@@ -205,11 +231,74 @@ button {
       border: 1px solid black;
 
       &:hover {
-         background-color: $color-yellow;
+         border: 1px solid $color-yellow;
+         color: white;
+         background-color: black;
       }
    }
 
    &.login {
       padding: 0px 39px;
+   }
+}
+
+@keyframes enter-right {
+   0% {
+      translate: 100vw;
+   }
+
+   30% {
+      opacity: 0;
+   }
+}
+
+@keyframes enter-left {
+   0% {
+      translate: -100vw;
+   }
+
+   30% {
+      opacity: 0;
+   }
+}
+
+@keyframes enter-bottom {
+   0% {
+      translate: 0 100%;
+      opacity: 0;
+   }
+}
+
+@keyframes bounce-updown {
+   0% {
+      translate: 0 0vh;
+   }
+
+   50% {
+      translate: 0 -2vh;
+   }
+
+   100% {
+      translate: 0 0vh;
+   }
+}
+
+@keyframes bg-enter-left {
+   0% {
+      background-position-x: -100vw;
+   }
+}
+
+@keyframes bg-size-bounce {
+   0% {
+      background-size: 42% auto;
+   }
+
+   50% {
+      background-size: 39% auto;
+   }
+
+   100% {
+      background-size: 42% auto;
    }
 }
