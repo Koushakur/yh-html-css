@@ -117,13 +117,16 @@ header {
 
             nav {
                display: flex;
-               gap: 05px;
+               gap: 5px;
 
                font-size: 1em;
                font-weight: 600;
 
+               @media (min-width: 400px) {
+                  gap: 15px;
+               }
+
                @media (min-width: $bs-s) {
-                  display: flex;
                   gap: 30px;
                }
 
@@ -171,6 +174,14 @@ main {
          animation: enter-right 0.8s ease-in-out;
          display: flex;
 
+         img {
+            display: none;
+
+            @media (min-width: $bs-xl) {
+               display: block;
+            }
+         }
+
          .jumbo {
             margin-top: 20px;
             margin-bottom: 50px;
@@ -186,57 +197,72 @@ main {
                display: flex;
                flex-direction: column;
                justify-items: center;
+
+               h1 {
+                  font-family: 'Inter bold', sans-serif;
+                  font-size: 3em;
+                  font-weight: 700;
+
+                  @media (min-width: $bs-m) {
+                     font-size: 4em;
+                  }
+
+                  @media (min-width: $bs-l) {
+                     font-size: 5em;
+                  }
+               }
+
+               p {
+                  color: #5b5b5b;
+                  font-size: 1em;
+                  margin-top: 1.5rem;
+                  margin-bottom: 3rem;
+
+                  @media (min-width: $bs-s) {
+                     font-size: 1.2em;
+                  }
+               }
+
+               #learn-more {
+                  margin-left: 0rem;
+                  margin-top: 1rem;
+
+                  @media (min-width: 400px) {
+                     margin-left: 1rem;
+                     margin-top: 0;
+
+                  }
+               }
+
+               @media (min-width: 1200px) {}
             }
          }
-
-         img {
-            display: none;
-
-            @media (min-width: $bs-xl) {
-               display: block;
-            }
-         }
-
-         h1 {
-            font-family: 'Inter bold', sans-serif;
-            font-size: 3em;
-            font-weight: 700;
-
-            @media (min-width: $bs-m) {
-               font-size: 4em;
-            }
-
-            @media (min-width: $bs-l) {
-               font-size: 5em;
-            }
-         }
-
-         p {
-            color: #5b5b5b;
-            font-size: 1em;
-            margin-top: 1.5rem;
-            margin-bottom: 3rem;
-
-            @media (min-width: $bs-s) {
-               font-size: 1.2em;
-            }
-         }
-
-         button {
-            // height: 10px;
-         }
-
-         @media (min-width: 1200px) {}
       }
    }
 
    .partners {
-      padding-top: 6rem;
+      padding-top: 4vh;
+      padding-bottom: 4vh;
       animation: enter-bottom 1s ease-in-out;
+
+      @media (min-width: $bs-l) {
+         padding-top: 6rem;
+         padding-bottom: 6rem;
+      }
 
       .container {
          display: flex;
          justify-content: space-around;
+         // gap: 50px;
+
+         img {
+            // max-height: 100%;
+            width: 10vw;
+
+            @media (min-width: $bs-l) {
+               width: auto;
+            }
+         }
       }
    }
 }

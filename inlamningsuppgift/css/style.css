@@ -98,9 +98,13 @@ header .header .csna .navigation-account nav {
   font-size: 1em;
   font-weight: 600;
 }
+@media (min-width: 400px) {
+  header .header .csna .navigation-account nav {
+    gap: 15px;
+  }
+}
 @media (min-width: 576px) {
   header .header .csna .navigation-account nav {
-    display: flex;
     gap: 30px;
   }
 }
@@ -139,6 +143,14 @@ main .showcase .container {
   animation: enter-right 0.8s ease-in-out;
   display: flex;
 }
+main .showcase .container img {
+  display: none;
+}
+@media (min-width: 1200px) {
+  main .showcase .container img {
+    display: block;
+  }
+}
 main .showcase .container .jumbo {
   margin-top: 20px;
   margin-bottom: 50px;
@@ -156,47 +168,64 @@ main .showcase .container .jumbo .content {
   flex-direction: column;
   justify-items: center;
 }
-main .showcase .container img {
-  display: none;
-}
-@media (min-width: 1200px) {
-  main .showcase .container img {
-    display: block;
-  }
-}
-main .showcase .container h1 {
+main .showcase .container .jumbo .content h1 {
   font-family: "Inter bold", sans-serif;
   font-size: 3em;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  main .showcase .container h1 {
+  main .showcase .container .jumbo .content h1 {
     font-size: 4em;
   }
 }
 @media (min-width: 992px) {
-  main .showcase .container h1 {
+  main .showcase .container .jumbo .content h1 {
     font-size: 5em;
   }
 }
-main .showcase .container p {
+main .showcase .container .jumbo .content p {
   color: #5b5b5b;
   font-size: 1em;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
 }
 @media (min-width: 576px) {
-  main .showcase .container p {
+  main .showcase .container .jumbo .content p {
     font-size: 1.2em;
   }
 }
+main .showcase .container .jumbo .content #learn-more {
+  margin-left: 0rem;
+  margin-top: 1rem;
+}
+@media (min-width: 400px) {
+  main .showcase .container .jumbo .content #learn-more {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+}
 main .partners {
-  padding-top: 6rem;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
   animation: enter-bottom 1s ease-in-out;
+}
+@media (min-width: 992px) {
+  main .partners {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 main .partners .container {
   display: flex;
   justify-content: space-around;
+}
+main .partners .container img {
+  width: 10vw;
+}
+@media (min-width: 992px) {
+  main .partners .container img {
+    width: auto;
+  }
 }
 
 footer {
