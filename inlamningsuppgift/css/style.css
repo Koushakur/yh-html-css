@@ -25,8 +25,23 @@ header .header {
 }
 header .header .logo {
   display: flex;
+  size: 50%;
   align-items: center;
-  margin-right: 50px;
+  margin-right: 0px;
+}
+@media (min-width: 576px) {
+  header .header .logo {
+    margin-right: 25px;
+  }
+}
+@media (min-width: 992px) {
+  header .header .logo {
+    margin-right: 50px;
+  }
+}
+header .header .logo img {
+  max-width: 100%;
+  height: auto;
 }
 header .header .csna {
   display: flex;
@@ -34,18 +49,29 @@ header .header .csna {
 }
 header .header .csna .contact-social {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   border: solid #a8b3bf;
   border-width: 0px 0px 1px;
   padding-bottom: 10px;
   font-size: 0.93em;
 }
+@media (min-width: 992px) {
+  header .header .csna .contact-social {
+    justify-content: space-between;
+  }
+}
 header .header .csna .contact-social .contact {
   color: #49494d;
   font-weight: 300;
-  display: flex;
+  display: none;
   align-items: center;
+  justify-items: flex-end;
   gap: 20px;
+}
+@media (min-width: 992px) {
+  header .header .csna .contact-social .contact {
+    display: flex;
+  }
 }
 header .header .csna .contact-social .social {
   display: flex;
@@ -68,9 +94,15 @@ header .header .csna .navigation-account {
 }
 header .header .csna .navigation-account nav {
   display: flex;
-  gap: 30px;
+  gap: 5px;
   font-size: 1em;
   font-weight: 600;
+}
+@media (min-width: 576px) {
+  header .header .csna .navigation-account nav {
+    display: flex;
+    gap: 30px;
+  }
 }
 header .header .csna .navigation-account nav a {
   color: inherit;
@@ -82,6 +114,14 @@ header .header .csna .navigation-account nav a.current {
 }
 header .header .csna .navigation-account nav a:hover {
   text-decoration: underline;
+}
+header .header .csna .navigation-account .account {
+  display: none;
+}
+@media (min-width: 768px) {
+  header .header .csna .navigation-account .account {
+    display: block;
+  }
 }
 
 main {
@@ -100,18 +140,55 @@ main .showcase .container {
   display: flex;
 }
 main .showcase .container .jumbo {
-  margin-top: 90px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  main .showcase .container .jumbo {
+    margin-top: 90px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+main .showcase .container .jumbo .content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+main .showcase .container img {
+  display: none;
+}
+@media (min-width: 1200px) {
+  main .showcase .container img {
+    display: block;
+  }
 }
 main .showcase .container h1 {
   font-family: "Inter bold", sans-serif;
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 700;
+}
+@media (min-width: 768px) {
+  main .showcase .container h1 {
+    font-size: 4em;
+  }
+}
+@media (min-width: 992px) {
+  main .showcase .container h1 {
+    font-size: 5em;
+  }
 }
 main .showcase .container p {
   color: #5b5b5b;
-  font-size: 1.2rem;
+  font-size: 1em;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
+}
+@media (min-width: 576px) {
+  main .showcase .container p {
+    font-size: 1.2em;
+  }
 }
 main .partners {
   padding-top: 6rem;
@@ -189,9 +266,14 @@ button.login {
 @keyframes enter-right {
   0% {
     translate: 100vw;
+    opacity: 0;
   }
   30% {
     opacity: 0;
+  }
+  100% {
+    translate: 0;
+    opacity: 100;
   }
 }
 @keyframes enter-left {
@@ -209,14 +291,11 @@ button.login {
   }
 }
 @keyframes bounce-updown {
-  0% {
+  0%, 100% {
     translate: 0 0vh;
   }
   50% {
     translate: 0 -2vh;
-  }
-  100% {
-    translate: 0 0vh;
   }
 }
 @keyframes bg-enter-left {
@@ -225,13 +304,10 @@ button.login {
   }
 }
 @keyframes bg-size-bounce {
-  0% {
+  0%, 100% {
     background-size: 42% auto;
   }
   50% {
     background-size: 39% auto;
-  }
-  100% {
-    background-size: 42% auto;
   }
 }

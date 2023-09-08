@@ -8,6 +8,12 @@ $color-accent-blue: #beebff;
 $color-nearly-black: #191919;
 $color-background-grey: #f0efe9;
 
+$bs-s: 576px;
+$bs-m: 768px;
+$bs-l: 992px;
+$bs-xl: 1200px;
+$bs-xxl: 1400px;
+
 $button-height: 3.5rem;
 // $button-height: 52px;
 
@@ -34,9 +40,23 @@ header {
 
       .logo {
          display: flex;
+         size: 50%;
          align-items: center;
 
-         margin-right: 50px;
+         margin-right: 0px;
+
+         @media (min-width: $bs-s) {
+            margin-right: 25px;
+         }
+
+         @media (min-width: $bs-l) {
+            margin-right: 50px;
+         }
+
+         img {
+            max-width: 100%;
+            height: auto;
+         }
       }
 
       /* contact-social-nav-account */
@@ -46,18 +66,28 @@ header {
 
          .contact-social {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             border: solid #a8b3bf;
             border-width: 0px 0px 1px;
             padding-bottom: 10px;
             font-size: 0.93em;
 
+            @media (min-width: $bs-l) {
+               justify-content: space-between;
+
+            }
+
             .contact {
                color: #49494d;
                font-weight: 300;
-               display: flex;
+               display: none;
                align-items: center;
+               justify-items: flex-end;
                gap: 20px;
+
+               @media(min-width: $bs-l) {
+                  display: flex;
+               }
             }
 
             .social {
@@ -87,10 +117,15 @@ header {
 
             nav {
                display: flex;
-               gap: 30px;
+               gap: 05px;
 
                font-size: 1em;
                font-weight: 600;
+
+               @media (min-width: $bs-s) {
+                  display: flex;
+                  gap: 30px;
+               }
 
                a {
                   color: inherit;
@@ -104,6 +139,14 @@ header {
                   &:hover {
                      text-decoration: underline;
                   }
+               }
+            }
+
+            .account {
+               display: none;
+
+               @media (min-width: $bs-m) {
+                  display: block;
                }
             }
          }
@@ -129,21 +172,61 @@ main {
          display: flex;
 
          .jumbo {
-            margin-top: 90px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+
+            @media (min-width: $bs-xl) {
+               margin-top: 90px;
+               margin-bottom: 0;
+               text-align: left;
+            }
+
+            .content {
+               display: flex;
+               flex-direction: column;
+               justify-items: center;
+            }
+         }
+
+         img {
+            display: none;
+
+            @media (min-width: $bs-xl) {
+               display: block;
+            }
          }
 
          h1 {
             font-family: 'Inter bold', sans-serif;
-            font-size: 5em;
+            font-size: 3em;
             font-weight: 700;
+
+            @media (min-width: $bs-m) {
+               font-size: 4em;
+            }
+
+            @media (min-width: $bs-l) {
+               font-size: 5em;
+            }
          }
 
          p {
             color: #5b5b5b;
-            font-size: 1.2rem;
+            font-size: 1em;
             margin-top: 1.5rem;
             margin-bottom: 3rem;
+
+            @media (min-width: $bs-s) {
+               font-size: 1.2em;
+            }
          }
+
+         button {
+            // height: 10px;
+         }
+
+         @media (min-width: 1200px) {}
       }
    }
 
@@ -245,10 +328,16 @@ button {
 @keyframes enter-right {
    0% {
       translate: 100vw;
+      opacity: 0;
    }
 
    30% {
       opacity: 0;
+   }
+
+   100% {
+      translate: 0;
+      opacity: 100;
    }
 }
 
@@ -270,16 +359,14 @@ button {
 }
 
 @keyframes bounce-updown {
-   0% {
+
+   0%,
+   100% {
       translate: 0 0vh;
    }
 
    50% {
       translate: 0 -2vh;
-   }
-
-   100% {
-      translate: 0 0vh;
    }
 }
 
@@ -290,15 +377,13 @@ button {
 }
 
 @keyframes bg-size-bounce {
-   0% {
+
+   0%,
+   100% {
       background-size: 42% auto;
    }
 
    50% {
       background-size: 39% auto;
-   }
-
-   100% {
-      background-size: 42% auto;
    }
 }
