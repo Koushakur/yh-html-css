@@ -8,6 +8,7 @@ $color-accent-blue: #beebff;
 $color-nearly-black: #191919;
 $color-background-grey: #f0efe9;
 
+// Bootstraps width cutoffs
 $bs-s: 576px;
 $bs-m: 768px;
 $bs-l: 992px;
@@ -39,23 +40,19 @@ header {
       display: flex;
 
       .logo {
-         display: flex;
+         display: none;
          size: 50%;
          align-items: center;
 
          margin-right: 0px;
 
-         @media (min-width: $bs-s) {
+         @media(min-width: $bs-m) {
             margin-right: 25px;
+            display: flex;
          }
 
          @media (min-width: $bs-l) {
             margin-right: 50px;
-         }
-
-         img {
-            max-width: 100%;
-            height: auto;
          }
       }
 
@@ -66,15 +63,20 @@ header {
 
          .contact-social {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             border: solid #a8b3bf;
             border-width: 0px 0px 1px;
-            padding-bottom: 10px;
+            padding-bottom: 0px;
             font-size: 0.93em;
+
+
+            @media (min-width: $bs-m) {
+               justify-content: flex-end;
+               padding-bottom: 10px;
+            }
 
             @media (min-width: $bs-l) {
                justify-content: space-between;
-
             }
 
             .contact {
@@ -87,6 +89,18 @@ header {
 
                @media(min-width: $bs-l) {
                   display: flex;
+               }
+            }
+
+            .small-logo {
+               display: flex;
+
+               img {
+                  height: 75%;
+               }
+
+               @media(min-width: $bs-m) {
+                  display: none;
                }
             }
 
@@ -145,7 +159,20 @@ header {
                }
             }
 
-            .account {
+            .account-mobile {
+               display: block;
+               margin-left: 10px;
+
+               button {
+                  height: calc($button-height / 2);
+               }
+
+               @media (min-width: $bs-m) {
+                  display: none;
+               }
+            }
+
+            .account-large {
                display: none;
 
                @media (min-width: $bs-m) {
@@ -256,7 +283,6 @@ main {
          // gap: 50px;
 
          img {
-            // max-height: 100%;
             width: 10vw;
 
             @media (min-width: $bs-l) {
@@ -291,6 +317,10 @@ footer {
    }
 }
 
+#gmp-map {
+   height: 620px;
+   width: 100%;
+}
 
 p {
    font-family: 'Atkinson Hyperlegible', sans-serif;
@@ -348,6 +378,16 @@ button {
 
    &.login {
       padding: 0px 39px;
+   }
+
+   &.btn-orange-round {
+      padding: 0px 20px;
+      background-color: $color-yellow;
+
+      &:hover {
+         background-color: $color-nearly-black;
+         color: white;
+      }
    }
 }
 

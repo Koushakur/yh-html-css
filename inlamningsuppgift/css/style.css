@@ -24,14 +24,15 @@ header .header {
   /* contact-social-nav-account */
 }
 header .header .logo {
-  display: flex;
+  display: none;
   size: 50%;
   align-items: center;
   margin-right: 0px;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   header .header .logo {
     margin-right: 25px;
+    display: flex;
   }
 }
 @media (min-width: 992px) {
@@ -39,21 +40,23 @@ header .header .logo {
     margin-right: 50px;
   }
 }
-header .header .logo img {
-  max-width: 100%;
-  height: auto;
-}
 header .header .csna {
   display: flex;
   flex-direction: column;
 }
 header .header .csna .contact-social {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   border: solid #a8b3bf;
   border-width: 0px 0px 1px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   font-size: 0.93em;
+}
+@media (min-width: 768px) {
+  header .header .csna .contact-social {
+    justify-content: flex-end;
+    padding-bottom: 10px;
+  }
 }
 @media (min-width: 992px) {
   header .header .csna .contact-social {
@@ -71,6 +74,17 @@ header .header .csna .contact-social .contact {
 @media (min-width: 992px) {
   header .header .csna .contact-social .contact {
     display: flex;
+  }
+}
+header .header .csna .contact-social .small-logo {
+  display: flex;
+}
+header .header .csna .contact-social .small-logo img {
+  height: 75%;
+}
+@media (min-width: 768px) {
+  header .header .csna .contact-social .small-logo {
+    display: none;
   }
 }
 header .header .csna .contact-social .social {
@@ -119,11 +133,23 @@ header .header .csna .navigation-account nav a.current {
 header .header .csna .navigation-account nav a:hover {
   text-decoration: underline;
 }
-header .header .csna .navigation-account .account {
+header .header .csna .navigation-account .account-mobile {
+  display: block;
+  margin-left: 10px;
+}
+header .header .csna .navigation-account .account-mobile button {
+  height: 1.75rem;
+}
+@media (min-width: 768px) {
+  header .header .csna .navigation-account .account-mobile {
+    display: none;
+  }
+}
+header .header .csna .navigation-account .account-large {
   display: none;
 }
 @media (min-width: 768px) {
-  header .header .csna .navigation-account .account {
+  header .header .csna .navigation-account .account-large {
     display: block;
   }
 }
@@ -244,6 +270,11 @@ footer a:hover {
   color: rgb(184, 184, 184);
 }
 
+#gmp-map {
+  height: 620px;
+  width: 100%;
+}
+
 p {
   font-family: "Atkinson Hyperlegible", sans-serif;
 }
@@ -290,6 +321,14 @@ button.btn-transparent:hover {
 }
 button.login {
   padding: 0px 39px;
+}
+button.btn-orange-round {
+  padding: 0px 20px;
+  background-color: #f9d783;
+}
+button.btn-orange-round:hover {
+  background-color: #191919;
+  color: white;
 }
 
 @keyframes enter-right {
