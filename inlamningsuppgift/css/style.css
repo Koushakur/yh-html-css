@@ -243,14 +243,13 @@ main .partners {
 }
 main .partners .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-}
-main .partners .container img {
-  width: 10vw;
+  gap: 20px 60px;
 }
 @media (min-width: 992px) {
-  main .partners .container img {
-    width: auto;
+  main .partners .container {
+    gap: 20px 20px;
   }
 }
 
