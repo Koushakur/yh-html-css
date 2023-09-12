@@ -7,6 +7,7 @@ $color-darker-yellow: #edcf87;
 $color-accent-blue: #beebff;
 $color-nearly-black: #191919;
 $color-background-grey: #f0efe9;
+$color-accent-red: #f94d1c;
 
 // Bootstraps width cutoffs
 $bs-s: 576px;
@@ -22,6 +23,8 @@ html,
 body {
    height: 100%;
    color: $color-nearly-black;
+
+   font-family: 'Inter bold', sans-serif;
 
    a {
       text-decoration: none;
@@ -226,7 +229,6 @@ main {
                justify-items: center;
 
                h1 {
-                  font-family: 'Inter bold', sans-serif;
                   font-size: 3em;
                   font-weight: 700;
 
@@ -240,7 +242,6 @@ main {
                }
 
                p {
-                  color: #5b5b5b;
                   font-size: 1em;
                   margin-top: 1.5rem;
                   margin-bottom: 3rem;
@@ -302,6 +303,137 @@ main {
          }
       }
    }
+
+   .features {
+
+      .container {
+         display: flex;
+         flex-direction: column;
+         padding: 20px;
+
+         @media (min-width: $bs-l) {
+            padding: 50px;
+            flex-direction: row;
+         }
+
+         .info {
+            flex: 1;
+            padding: 00px;
+            margin-top: -20px;
+            margin-bottom: 40px;
+            text-align: center;
+
+            @media (min-width: $bs-l) {
+               margin-bottom: 00px;
+               padding: 50px;
+            }
+
+            h2 {
+               margin-top: 20px;
+               margin-bottom: 50px;
+
+               @media (min-width: $bs-l) {
+                  text-align: left;
+               }
+            }
+
+            h3 {
+               margin-top: 40px;
+
+               @media (min-width: $bs-l) {
+                  text-align: left;
+                  margin-top: 0px;
+               }
+            }
+
+            button {
+               width: 90%;
+            }
+         }
+
+         .grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-right: 0px;
+
+            @media (min-width: $bs-xl) {
+               margin-right: 50px;
+            }
+
+            .content {
+               padding: 1rem;
+
+               max-width: 300px;
+
+               span {
+                  font-size: 1.75rem;
+                  margin-bottom: 30px;
+               }
+            }
+
+            h4 {
+               padding-bottom: 15px;
+            }
+         }
+      }
+   }
+
+   .services {
+      background-color: $color-background-grey;
+
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      h2 {
+         margin-top: 20px;
+         margin-bottom: 40px;
+      }
+
+      .flexbox {
+         display: flex;
+         justify-content: space-between;
+
+         .content {
+            background-color: white;
+            height: 333px;
+            width: 310px;
+
+            padding: 30px;
+
+            transition-duration: 0.3s;
+
+            .fa-horizontal-rule {
+               padding-top: 10px;
+               padding-bottom: 40px;
+            }
+
+            &:hover {
+               background-color: $color-yellow;
+               color: $color-nearly-black;
+            }
+
+            a {
+               display: flex;
+               justify-content: right;
+            }
+
+            button {
+               margin-top: 10px;
+            }
+         }
+      }
+
+      .browse {
+         margin-top: 40px;
+         text-align: center;
+      }
+
+      background-image: url("../img/background/background-lines-right.svg");
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      animation: bg-size-bounce 10s infinite ease-in-out;
+   }
 }
 
 footer {
@@ -333,8 +465,37 @@ footer {
    width: 100%;
 }
 
+// Section titles
+h2 {
+   font-size: 1.5rem;
+   font-weight: 900;
+
+   @media (min-width: $bs-m) {
+      font-size: 2.2rem;
+   }
+
+   @media (min-width: $bs-l) {
+      text-align: left;
+      font-size: 2.8rem;
+      font-weight: 700;
+   }
+}
+
+// Red section highlight
+h3 {
+   color: $color-accent-red;
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+
+// Section content titles
+h4 {
+   font-weight: 700;
+}
+
 p {
    font-family: 'Atkinson Hyperlegible', sans-serif;
+   color: #5b5b5b;
 }
 
 button {
@@ -387,20 +548,15 @@ button {
       }
    }
 
-   &.login {
-      padding: 0px 39px;
-   }
-
-   &.btn-orange-round {
-      padding: 0px 20px;
-      background-color: $color-yellow;
-
-      &:hover {
-         background-color: $color-nearly-black;
-         color: white;
-      }
+   &.round {
+      padding: 0;
+      width: $button-height;
    }
 }
+
+//
+// Only keyframes below here
+//
 
 @keyframes enter-right {
    0% {
@@ -450,6 +606,12 @@ button {
 @keyframes bg-enter-left {
    0% {
       background-position-x: -100vw;
+   }
+}
+
+@keyframes bg-enter-right {
+   0% {
+      background-position-x: 100vw;
    }
 }
 

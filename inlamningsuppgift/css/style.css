@@ -6,6 +6,7 @@ html,
 body {
   height: 100%;
   color: #191919;
+  font-family: "Inter bold", sans-serif;
 }
 html a,
 body a {
@@ -195,7 +196,6 @@ main .showcase .container .jumbo .content {
   justify-items: center;
 }
 main .showcase .container .jumbo .content h1 {
-  font-family: "Inter bold", sans-serif;
   font-size: 3em;
   font-weight: 700;
 }
@@ -210,7 +210,6 @@ main .showcase .container .jumbo .content h1 {
   }
 }
 main .showcase .container .jumbo .content p {
-  color: #5b5b5b;
   font-size: 1em;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -270,6 +269,116 @@ main .partners .container img {
     width: auto;
   }
 }
+main .features .container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+@media (min-width: 992px) {
+  main .features .container {
+    padding: 50px;
+    flex-direction: row;
+  }
+}
+main .features .container .info {
+  flex: 1;
+  padding: 0px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  main .features .container .info {
+    margin-bottom: 0px;
+    padding: 50px;
+  }
+}
+main .features .container .info h2 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  main .features .container .info h2 {
+    text-align: left;
+  }
+}
+main .features .container .info h3 {
+  margin-top: 40px;
+}
+@media (min-width: 992px) {
+  main .features .container .info h3 {
+    text-align: left;
+    margin-top: 0px;
+  }
+}
+main .features .container .info button {
+  width: 90%;
+}
+main .features .container .grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-right: 0px;
+}
+@media (min-width: 1200px) {
+  main .features .container .grid {
+    margin-right: 50px;
+  }
+}
+main .features .container .grid .content {
+  padding: 1rem;
+  max-width: 300px;
+}
+main .features .container .grid .content span {
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+}
+main .features .container .grid h4 {
+  padding-bottom: 15px;
+}
+main .services {
+  background-color: #f0efe9;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("../img/background/background-lines-right.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  animation: bg-size-bounce 10s infinite ease-in-out;
+}
+main .services h2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+main .services .flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+main .services .flexbox .content {
+  background-color: white;
+  height: 333px;
+  width: 310px;
+  padding: 30px;
+  transition-duration: 0.3s;
+}
+main .services .flexbox .content .fa-horizontal-rule {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+main .services .flexbox .content:hover {
+  background-color: #f9d783;
+  color: #191919;
+}
+main .services .flexbox .content a {
+  display: flex;
+  justify-content: right;
+}
+main .services .flexbox .content button {
+  margin-top: 10px;
+}
+main .services .browse {
+  margin-top: 40px;
+  text-align: center;
+}
 
 footer {
   height: 3rem;
@@ -292,8 +401,36 @@ footer a:hover {
   width: 100%;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 992px) {
+  h2 {
+    text-align: left;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+}
+
+h3 {
+  color: #f94d1c;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: 700;
+}
+
 p {
   font-family: "Atkinson Hyperlegible", sans-serif;
+  color: #5b5b5b;
 }
 
 button {
@@ -336,16 +473,9 @@ button.btn-transparent:hover {
   color: white;
   background-color: black;
 }
-button.login {
-  padding: 0px 39px;
-}
-button.btn-orange-round {
-  padding: 0px 20px;
-  background-color: #f9d783;
-}
-button.btn-orange-round:hover {
-  background-color: #191919;
-  color: white;
+button.round {
+  padding: 0;
+  width: 3.5rem;
 }
 
 @keyframes enter-right {
@@ -386,6 +516,11 @@ button.btn-orange-round:hover {
 @keyframes bg-enter-left {
   0% {
     background-position-x: -100vw;
+  }
+}
+@keyframes bg-enter-right {
+  0% {
+    background-position-x: 100vw;
   }
 }
 @keyframes bg-size-bounce {
