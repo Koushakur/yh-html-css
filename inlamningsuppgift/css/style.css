@@ -244,12 +244,30 @@ main .partners {
 main .partners .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px 60px;
+  justify-content: space-evenly;
+  gap: 20px 20px;
+}
+@media (min-width: 768px) {
+  main .partners .container {
+    gap: 20px 60px;
+  }
 }
 @media (min-width: 992px) {
   main .partners .container {
     gap: 20px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  main .partners .container {
+    justify-content: space-around;
+  }
+}
+main .partners .container img {
+  width: 25vw;
+}
+@media (min-width: 768px) {
+  main .partners .container img {
+    width: auto;
   }
 }
 

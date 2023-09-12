@@ -278,11 +278,27 @@ main {
       .container {
          display: flex;
          flex-wrap: wrap;
-         justify-content: space-around;
-         gap: 20px 60px;
+         justify-content: space-evenly;
+         gap: 20px 20px;
+
+         @media (min-width: $bs-m) {
+            gap: 20px 60px;
+         }
 
          @media (min-width: $bs-l) {
             gap: 20px 20px;
+         }
+
+         @media (min-width: $bs-xl) {
+            justify-content: space-around;
+         }
+
+         img {
+            width: 25vw;
+
+            @media (min-width: $bs-m) {
+               width: auto;
+            }
          }
       }
    }
