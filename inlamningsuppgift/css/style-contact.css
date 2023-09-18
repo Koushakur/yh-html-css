@@ -1,0 +1,140 @@
+@keyframes enter-right {
+  0% {
+    translate: 100vw;
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    translate: 0;
+    opacity: 100;
+  }
+}
+@keyframes enter-bottom {
+  0% {
+    translate: 0 100%;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 100%;
+  }
+}
+@keyframes bounce-updown {
+  0%, 100% {
+    translate: 0 0vh;
+  }
+  50% {
+    translate: 0 -2vh;
+  }
+}
+@keyframes bg-enter-left {
+  0% {
+    background-position-x: -100vw;
+  }
+  100% {
+    background-position-x: 0vw;
+  }
+}
+@keyframes bg-enter-right {
+  0% {
+    background-position-x: 100vw;
+  }
+  100% {
+    background-position-x: 0vw;
+  }
+}
+@keyframes bg-size-bounce {
+  0%, 100% {
+    background-size: 42% auto;
+  }
+  50% {
+    background-size: 39% auto;
+  }
+}
+@keyframes bg-size-bounce-small {
+  0%, 100% {
+    background-size: 19% auto;
+  }
+  50% {
+    background-size: 16% auto;
+  }
+}
+main .sub-header {
+  background-color: #f0efe9;
+  text-align: center;
+  background-image: url("../img/background/background-lines.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  animation: bg-size-bounce 10s infinite ease-in-out, bg-enter-left 1s ease-in-out;
+  padding-top: 5.5vh;
+  padding-bottom: 7.5vh;
+}
+main .sub-header h1 {
+  font-weight: 700;
+}
+main .sub-header h5 {
+  font-size: 0.8rem;
+}
+main .contact-info {
+  margin-top: 9vh;
+}
+main .contact-info .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+main .contact-info .container .content {
+  border: 2px solid #f0efe9;
+  padding: 50px;
+  padding-bottom: 30px;
+  position: relative;
+}
+main .contact-info .container .content img {
+  position: absolute;
+  left: 10%;
+}
+main .contact-info .container .content div {
+  margin-left: 28%;
+}
+main .message {
+  margin-top: 7vh;
+}
+main .message .container {
+  background-color: #f0efe9;
+  padding: 20px 30px;
+}
+@media (min-width: 768px) {
+  main .message .container {
+    padding: 50px 75px;
+  }
+}
+@media (min-width: 1200px) {
+  main .message .container {
+    padding: 100px 150px;
+  }
+}
+main .message .container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .message .container input {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+main .message .container #message {
+  margin-top: 15px;
+  height: 10rem;
+  width: 100%;
+}
+main .message .container button {
+  width: 100%;
+  margin-top: 30px;
+}
+main #gmp-map {
+  margin-top: 120px;
+  height: 58vh;
+  width: 100%;
+}
