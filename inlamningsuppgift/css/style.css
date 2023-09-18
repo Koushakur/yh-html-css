@@ -509,9 +509,10 @@ main .studies .container button {
 main #to-top {
   display: none;
   position: fixed;
-  right: 50px;
-  bottom: 50px;
-  font-size: 1.3rem;
+  right: 3vw;
+  bottom: 9vh;
+  height: 2.9166666667rem;
+  width: 2.9166666667rem;
 }
 
 footer {

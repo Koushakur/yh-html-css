@@ -1,9 +1,12 @@
 window.addEventListener('scroll',
    function () {
-      if (window.scrollY > 400) {
-         this.document.getElementById("to-top").style.display = "block";
-      } else {
-         this.document.getElementById("to-top").style.display = "none";
+      var elmnt = this.document.getElementById("to-top");
+
+      if (elmnt.style.display != "block" && window.scrollY > 400) {
+         elmnt.style.display = "block";
+
+      } else if (elmnt.style.display != "none" && window.scrollY < 400) {
+         elmnt.style.display = "none";
       }
    }
 );

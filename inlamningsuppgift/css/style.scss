@@ -498,10 +498,11 @@ main {
    #to-top {
       display: none;
       position: fixed;
-      right: 50px;
-      bottom: 50px;
+      right: 3vw;
+      bottom: $gap-large;
 
-      font-size: 1.3rem;
+      height: calc($button-height / 1.2);
+      width: calc($button-height / 1.2);
    }
 }
 
