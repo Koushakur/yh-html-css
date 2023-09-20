@@ -401,6 +401,85 @@ main .features .container .grid .content span {
 main .features .container .grid h4 {
   padding-bottom: 15px;
 }
+main .about {
+  margin-top: 9vh;
+  margin-bottom: 9vh;
+}
+main .about .container {
+  display: flex;
+  gap: 14vw;
+}
+main .about .container .image-box {
+  position: relative;
+  flex: 1;
+  display: none;
+}
+@media (min-width: 768px) {
+  main .about .container .image-box {
+    display: block;
+  }
+}
+main .about .container .image-box img {
+  margin-left: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 600px;
+}
+main .about .container .image-box .image-info {
+  position: absolute;
+  bottom: 50px;
+  background-color: #beebff;
+  box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  padding: 30px;
+}
+main .about .container .image-box .image-info h3 {
+  display: inline;
+  font-size: 1rem;
+}
+main .about .container .image-box .image-info h4 {
+  display: inline;
+}
+main .about .container .image-box .image-info p {
+  margin-top: 20px;
+  color: #191919;
+}
+main .about .container .content {
+  flex: 1;
+}
+main .about .container .content .buttons {
+  display: flex;
+  margin-top: 0px;
+  text-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  main .about .container .content .buttons {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  main .about .container .content .buttons {
+    margin-top: 60px;
+  }
+}
+main .about .container .content .buttons .video-button {
+  margin-left: 20px;
+}
+main .about .container .content .buttons .video-button button {
+  margin-right: 10px;
+}
+@media (min-width: 1200px) {
+  main .about .container .content .buttons .video-button {
+    margin-left: 40px;
+  }
+}
+main .about .container .content h2 {
+  margin-bottom: 40px;
+}
+main .about .container .content p {
+  margin-bottom: 40px;
+}
 main .services {
   background-color: #f0efe9;
   padding-top: 9vh;
@@ -552,7 +631,7 @@ footer .footer-lower .container .copyright-social .social a {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   h2 {
@@ -562,7 +641,6 @@ h2 {
 @media (min-width: 992px) {
   h2 {
     font-size: 2.8rem;
-    font-weight: 700;
   }
 }
 
@@ -608,6 +686,7 @@ button.btn-black {
 }
 button.btn-black:hover {
   background-color: white;
+  border: 1px solid #191919;
   color: #191919;
 }
 button.btn-white {
