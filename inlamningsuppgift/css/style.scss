@@ -501,8 +501,8 @@ main {
       right: 3vw;
       bottom: $gap-large;
 
-      height: calc($button-height / 1.2);
-      width: calc($button-height / 1.2);
+      height: calc($button-height * 0.8);
+      width: calc($button-height * 0.8);
    }
 }
 
@@ -694,9 +694,14 @@ textarea {
 
    main {
       flex-grow: 1;
+
+      .sub-header {
+         margin-top: $gap-large;
+      }
+
+      img {
+         padding: 50px;
+      }
    }
 
-   img {
-      padding: 50px;
-   }
 }

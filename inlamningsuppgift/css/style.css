@@ -511,8 +511,8 @@ main #to-top {
   position: fixed;
   right: 3vw;
   bottom: 9vh;
-  height: 2.9166666667rem;
-  width: 2.9166666667rem;
+  height: 2.8rem;
+  width: 2.8rem;
 }
 
 footer {
@@ -682,6 +682,9 @@ textarea {
 .s404 main {
   flex-grow: 1;
 }
-.s404 img {
+.s404 main .sub-header {
+  margin-top: 9vh;
+}
+.s404 main img {
   padding: 50px;
 }
