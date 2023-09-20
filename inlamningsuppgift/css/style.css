@@ -450,8 +450,8 @@ main .about .container .content {
 }
 main .about .container .content .buttons {
   display: flex;
-  margin-top: 0px;
   text-wrap: nowrap;
+  margin-top: 0px;
 }
 @media (min-width: 768px) {
   main .about .container .content .buttons {
@@ -489,33 +489,52 @@ main .services {
   background-position: bottom right;
   animation: bg-size-bounce 10s infinite ease-in-out;
 }
-main .services h2 {
+main .services .title {
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  main .services .title {
+    text-align: left;
+  }
+}
+main .services .title h2 {
   margin-bottom: 40px;
 }
-main .services .flexbox {
-  display: flex;
-  justify-content: space-between;
+main .services .gridbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
   gap: 30px;
 }
-main .services .flexbox .content {
+@media (min-width: 576px) {
+  main .services .gridbox {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  main .services .gridbox {
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  }
+}
+main .services .gridbox .content {
   position: relative;
   background-color: white;
   max-height: 333px;
   padding: 30px;
   transition-duration: 0.3s;
 }
-main .services .flexbox .content .fa-horizontal-rule {
+main .services .gridbox .content .fa-horizontal-rule {
   padding-top: 10px;
   padding-bottom: 40px;
 }
-main .services .flexbox .content .button-box {
+main .services .gridbox .content .button-box {
   display: flex;
   justify-content: right;
 }
-main .services .flexbox .content:hover {
+main .services .gridbox .content:hover {
   background-color: #f9d783;
 }
-main .services .flexbox .content:hover > .button-box > button {
+main .services .gridbox .content:hover > .button-box > button {
   color: #191919;
   background-color: white;
 }

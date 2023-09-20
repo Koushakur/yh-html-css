@@ -383,7 +383,6 @@ main {
 
             @media (min-width: $bs-m) {
                display: block;
-
             }
 
             img {
@@ -424,6 +423,8 @@ main {
 
             .buttons {
                display: flex;
+               text-wrap: nowrap;
+
                margin-top: 0px;
 
                @media (min-width: $bs-m) {
@@ -434,7 +435,6 @@ main {
                   margin-top: 60px;
                }
 
-               text-wrap: nowrap;
 
                .video-button {
                   margin-left: 20px;
@@ -446,11 +446,8 @@ main {
                   @media (min-width: $bs-xl) {
                      margin-left: 40px;
                   }
-
-                  .btn-transparent {}
                }
             }
-
 
             h2 {
                margin-bottom: 40px;
@@ -469,14 +466,32 @@ main {
       padding-top: $gap-large;
       padding-bottom: $gap-large;
 
-      h2 {
-         margin-bottom: 40px;
+      .title {
+         text-align: center;
+
+         @media (min-width: $bs-xl) {
+            text-align: left;
+         }
+
+         h2 {
+            margin-bottom: 40px;
+         }
       }
 
-      .flexbox {
-         display: flex;
-         justify-content: space-between;
+      .gridbox {
+         display: grid;
+         grid-template-columns: 1fr;
+
+         justify-content: center;
          gap: 30px;
+
+         @media (min-width: $bs-s) {
+            grid-template-columns: 1fr 1fr;
+         }
+
+         @media (min-width: $bs-xl) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+         }
 
          .content {
             position: relative;
