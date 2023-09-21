@@ -542,6 +542,69 @@ main .services .browse {
   margin-top: 40px;
   text-align: center;
 }
+main .why-us {
+  position: relative;
+  margin-top: 7vh;
+  margin-bottom: 9vh;
+}
+main .why-us .container {
+  display: flex;
+  justify-content: space-between;
+}
+main .why-us .container .content-box {
+  max-width: 500px;
+}
+main .why-us .container .content-box h2 {
+  margin-bottom: 5vh;
+}
+main .why-us .container .content-box .content {
+  display: grid;
+  grid-template-areas: "icon title" "icon text";
+  grid-template-columns: auto 1fr;
+  margin-top: 40px;
+}
+main .why-us .container .content-box .content img {
+  grid-area: icon;
+  padding: 15px;
+  margin-right: 20px;
+  border: 2px solid #f0efe9;
+  border-radius: 50px;
+  overflow: visible;
+}
+main .why-us .container .content-box .content h4 {
+  grid-area: title;
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+main .why-us .container .content-box .content p {
+  grid-area: text;
+  height: 100%;
+  padding-top: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+main .why-us .container .image-box {
+  width: 650px;
+  position: relative;
+}
+main .why-us .container .image-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+main .why-us .grey-box {
+  background-color: #f0efe9;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 55vw;
+  height: 67%;
+}
 main .studies {
   margin-top: 9vh;
   margin-bottom: 9vh;
