@@ -434,50 +434,60 @@ main .about .container .image-box .image-info {
   width: 70%;
   padding: 30px;
 }
+main .about .container .image-box .image-info h4 {
+  display: inline;
+}
 main .about .container .image-box .image-info h3 {
   display: inline;
   font-size: 1rem;
-}
-main .about .container .image-box .image-info h4 {
-  display: inline;
 }
 main .about .container .image-box .image-info p {
   margin-top: 20px;
   color: #191919;
 }
-main .about .container .content {
+main .about .container .content-box {
   flex: 1;
 }
-main .about .container .content .buttons {
+main .about .container .content-box .buttons {
   display: flex;
+  text-align: center;
   text-wrap: nowrap;
+  flex-direction: column;
   margin-top: 0px;
 }
 @media (min-width: 768px) {
-  main .about .container .content .buttons {
+  main .about .container .content-box .buttons {
+    text-align: left;
+    flex-direction: row;
     margin-top: 20px;
   }
 }
 @media (min-width: 1200px) {
-  main .about .container .content .buttons {
+  main .about .container .content-box .buttons {
     margin-top: 60px;
   }
 }
-main .about .container .content .buttons .video-button {
-  margin-left: 20px;
+main .about .container .content-box .buttons .video-button {
+  margin-top: 20px;
 }
-main .about .container .content .buttons .video-button button {
+main .about .container .content-box .buttons .video-button button {
   margin-right: 10px;
 }
+@media (min-width: 768px) {
+  main .about .container .content-box .buttons .video-button {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+}
 @media (min-width: 1200px) {
-  main .about .container .content .buttons .video-button {
+  main .about .container .content-box .buttons .video-button {
     margin-left: 40px;
   }
 }
-main .about .container .content h2 {
+main .about .container .content-box h2 {
   margin-bottom: 40px;
 }
-main .about .container .content p {
+main .about .container .content-box p {
   margin-bottom: 40px;
 }
 main .services {
@@ -553,12 +563,10 @@ main .why-us .container {
 }
 main .why-us .container .content-box {
   text-align: center;
-  margin-left: 7vw;
 }
 @media (min-width: 992px) {
   main .why-us .container .content-box {
     text-align: left;
-    margin-left: 0;
     max-width: 450px;
   }
 }
@@ -571,6 +579,16 @@ main .why-us .container .content-box .content {
   grid-template-areas: "icon title" "icon text";
   grid-template-columns: auto 1fr;
   margin-top: 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 992px) {
+  main .why-us .container .content-box .content {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 main .why-us .container .content-box .content img {
   grid-area: icon;
@@ -614,6 +632,7 @@ main .why-us .container .image-box img {
 main .why-us .grey-box {
   background-color: #f0efe9;
   position: absolute;
+  z-index: -99;
   right: 0;
   bottom: 0;
   width: 55vw;

@@ -178,6 +178,7 @@ header {
 main {
    width: 100%;
 
+   // Jumbotron showcase
    .showcase {
       background-color: $color-background-grey;
       padding-top: 2rem;
@@ -254,6 +255,7 @@ main {
       }
    }
 
+   // Partner logos
    .partners {
       padding-top: 4vh;
       padding-bottom: 4vh;
@@ -292,6 +294,7 @@ main {
       }
    }
 
+   // Features
    .features {
 
       .container {
@@ -367,6 +370,7 @@ main {
       }
    }
 
+   // About company
    .about {
       margin-top: $gap-large;
       margin-bottom: $gap-large;
@@ -402,13 +406,13 @@ main {
                width: 70%;
                padding: 30px;
 
+               h4 {
+                  display: inline;
+               }
+
                h3 {
                   display: inline;
                   font-size: 1rem;
-               }
-
-               h4 {
-                  display: inline;
                }
 
                p {
@@ -418,16 +422,20 @@ main {
             }
          }
 
-         .content {
+         .content-box {
             flex: 1;
 
             .buttons {
                display: flex;
+               text-align: center;
                text-wrap: nowrap;
+               flex-direction: column;
 
                margin-top: 0px;
 
                @media (min-width: $bs-m) {
+                  text-align: left;
+                  flex-direction: row;
                   margin-top: 20px;
                }
 
@@ -435,12 +443,16 @@ main {
                   margin-top: 60px;
                }
 
-
                .video-button {
-                  margin-left: 20px;
+                  margin-top: 20px;
 
                   button {
                      margin-right: 10px;
+                  }
+
+                  @media (min-width: $bs-m) {
+                     margin-top: 0px;
+                     margin-left: 20px;
                   }
 
                   @media (min-width: $bs-xl) {
@@ -460,6 +472,7 @@ main {
       }
    }
 
+   // Our services
    .services {
       background-color: $color-background-grey;
 
@@ -535,6 +548,7 @@ main {
       animation: bg-size-bounce 10s infinite ease-in-out;
    }
 
+   // Why choose us
    .why-us {
       position: relative;
       margin-top: $gap-medium;
@@ -546,11 +560,11 @@ main {
 
          .content-box {
             text-align: center;
-            margin-left: 7vw;
+            // margin-left: 7vw;
 
             @media (min-width: $bs-l) {
                text-align: left;
-               margin-left: 0;
+               // margin-left: 0;
                max-width: 450px;
             }
 
@@ -568,6 +582,15 @@ main {
 
                grid-template-columns: auto 1fr;
                margin-top: 40px;
+
+               width: fit-content;
+               margin-left: auto;
+               margin-right: auto;
+
+               @media (min-width: $bs-l) {
+                  margin-left: 0;
+                  margin-right: 0;
+               }
 
                img {
                   grid-area: icon;
@@ -624,7 +647,9 @@ main {
 
       .grey-box {
          background-color: $color-background-grey;
+
          position: absolute;
+         z-index: -99;
          right: 0;
          bottom: 0;
 
@@ -639,6 +664,7 @@ main {
       }
    }
 
+   // Project & case studies
    .studies {
       margin-top: $gap-large;
       margin-bottom: $gap-large;
@@ -710,6 +736,7 @@ main {
       }
    }
 
+   // Jump to top of page button
    #to-top {
       display: none;
       position: fixed;
