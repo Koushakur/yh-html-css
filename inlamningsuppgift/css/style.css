@@ -492,12 +492,12 @@ main .about .container .content-box p {
 }
 main .services {
   background-color: #f0efe9;
-  padding-top: 9vh;
-  padding-bottom: 9vh;
   background-image: url("../img/background/background-lines-right.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
   animation: bg-size-bounce 10s infinite ease-in-out;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
 }
 main .services .title {
   text-align: center;
@@ -705,6 +705,52 @@ main .studies .container .content-box a {
 }
 main .studies .container button {
   margin-top: 5vh;
+}
+main .newsletter {
+  background-color: #f0efe9;
+  background-image: url("../img/background/background-wavy-lines.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: 70%;
+}
+main .newsletter .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: nowrap;
+  padding: 9vh 0;
+}
+@media (min-width: 1400px) {
+  main .newsletter .container {
+    flex-direction: row;
+  }
+}
+main .newsletter .container form {
+  margin-top: 25px;
+}
+@media (min-width: 1400px) {
+  main .newsletter .container form {
+    margin-top: 0;
+  }
+}
+main .newsletter .container form input {
+  width: 250px;
+  margin: 0 15px;
+  padding: 1rem 2.5rem;
+}
+@media (min-width: 768px) {
+  main .newsletter .container form input {
+    width: 300px;
+  }
+}
+main .newsletter .container form button {
+  margin-top: 20px;
+}
+@media (min-width: 1400px) {
+  main .newsletter .container form button {
+    margin-top: 0;
+  }
 }
 main #to-top {
   display: none;

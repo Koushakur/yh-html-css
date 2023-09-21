@@ -476,6 +476,11 @@ main {
    .services {
       background-color: $color-background-grey;
 
+      background-image: url("../img/background/background-lines-right.svg");
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      animation: bg-size-bounce 10s infinite ease-in-out;
+
       padding-top: $gap-large;
       padding-bottom: $gap-large;
 
@@ -541,11 +546,6 @@ main {
          margin-top: 40px;
          text-align: center;
       }
-
-      background-image: url("../img/background/background-lines-right.svg");
-      background-repeat: no-repeat;
-      background-position: bottom right;
-      animation: bg-size-bounce 10s infinite ease-in-out;
    }
 
    // Why choose us
@@ -733,6 +733,58 @@ main {
          button {
             margin-top: $gap-small;
          }
+      }
+   }
+
+   // Newsletter signup
+   .newsletter {
+      background-color: $color-background-grey;
+
+      background-image: url("../img/background/background-wavy-lines.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-position-y: 70%;
+
+      .container {
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+         text-align: center;
+         flex-wrap: nowrap;
+
+         padding: $gap-large 0;
+
+         @media (min-width: $bs-xxl) {
+            flex-direction: row;
+         }
+
+         form {
+            margin-top: 25px;
+
+            @media (min-width: $bs-xxl) {
+               margin-top: 0;
+            }
+
+            input {
+               width: 250px;
+               margin: 0 15px;
+
+               padding: 1rem 2.5rem;
+
+               @media (min-width: $bs-m) {
+                  width: 300px;
+               }
+            }
+
+            button {
+               margin-top: 20px;
+
+               @media (min-width: $bs-xxl) {
+                  margin-top: 0;
+               }
+            }
+         }
+
       }
    }
 
