@@ -560,11 +560,9 @@ main {
 
          .content-box {
             text-align: center;
-            // margin-left: 7vw;
 
             @media (min-width: $bs-l) {
                text-align: left;
-               // margin-left: 0;
                max-width: 450px;
             }
 
@@ -581,9 +579,11 @@ main {
                   "icon text";
 
                grid-template-columns: auto 1fr;
+               // grid-template-rows: 1fr 1fr;
                margin-top: 40px;
 
                width: fit-content;
+
                margin-left: auto;
                margin-right: auto;
 
@@ -595,9 +595,9 @@ main {
                img {
                   grid-area: icon;
 
-                  padding: 15px;
                   margin-right: 20px;
 
+                  padding: 15px;
                   border: 2px solid $color-background-grey;
                   border-radius: 50px;
                   overflow: visible;
@@ -615,7 +615,6 @@ main {
                   grid-area: text;
                   height: 100%;
 
-                  padding-top: 5px;
                   margin-top: auto;
                   margin-bottom: auto;
                }
@@ -645,6 +644,7 @@ main {
          }
       }
 
+      // Grey area in background
       .grey-box {
          background-color: $color-background-grey;
 
@@ -732,6 +732,107 @@ main {
 
          button {
             margin-top: $gap-small;
+         }
+      }
+   }
+
+   .our-team {
+      background-color: $color-darker-yellow;
+
+      padding: $gap-large 0;
+   }
+
+   .testimonials {
+      background-color: $color-darker-yellow;
+
+      padding: $gap-large 0;
+
+      .container {
+         background-color: white;
+
+         text-align: center;
+
+         padding: $gap-small;
+
+         @media (min-width: $bs-m) {
+            padding: $gap-large;
+         }
+
+         .content-box {
+            display: grid;
+            justify-content: space-between;
+
+            margin-top: $gap-medium;
+
+            grid-template-columns: 1fr;
+            gap: 50px;
+
+            @media (min-width: $bs-l) {
+               // grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+               grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: $bs-xxl) {
+               // grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+               grid-template-columns: repeat(3, 1fr);
+            }
+
+            .content {
+               width: 100%;
+               text-align: left;
+
+               span {
+                  color: $color-accent-red;
+                  font-size: 0.8rem;
+                  margin-right: 4px;
+                  margin-bottom: 20px;
+               }
+
+               .person-info {
+                  display: grid;
+
+                  grid-template-areas:
+                     "image name"
+                     "image title"
+                  ;
+
+                  grid-template-columns: auto 1fr;
+                  grid-template-rows: 1fr 1fr;
+
+
+                  img {
+                     grid-area: image;
+                     margin-right: 20px;
+                  }
+
+                  h4 {
+                     grid-area: name;
+
+                     display: flex;
+                     align-items: center;
+
+                     height: 100%;
+                  }
+
+                  h3 {
+                     grid-area: title;
+
+                     display: flex;
+                     align-items: center;
+
+                     height: 100%;
+
+                     font-size: 0.9rem;
+                     font-weight: 400;
+
+                     // margin-bottom: 0;
+                  }
+               }
+            }
+         }
+
+         button {
+            margin-top: $gap-medium;
          }
       }
    }

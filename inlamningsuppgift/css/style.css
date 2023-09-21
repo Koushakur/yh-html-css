@@ -592,8 +592,8 @@ main .why-us .container .content-box .content {
 }
 main .why-us .container .content-box .content img {
   grid-area: icon;
-  padding: 15px;
   margin-right: 20px;
+  padding: 15px;
   border: 2px solid #f0efe9;
   border-radius: 50px;
   overflow: visible;
@@ -607,7 +607,6 @@ main .why-us .container .content-box .content h4 {
 main .why-us .container .content-box .content p {
   grid-area: text;
   height: 100%;
-  padding-top: 5px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -705,6 +704,78 @@ main .studies .container .content-box a {
 }
 main .studies .container button {
   margin-top: 5vh;
+}
+main .our-team {
+  background-color: #edcf87;
+  padding: 9vh 0;
+}
+main .testimonials {
+  background-color: #edcf87;
+  padding: 9vh 0;
+}
+main .testimonials .container {
+  background-color: white;
+  text-align: center;
+  padding: 5vh;
+}
+@media (min-width: 768px) {
+  main .testimonials .container {
+    padding: 9vh;
+  }
+}
+main .testimonials .container .content-box {
+  display: grid;
+  justify-content: space-between;
+  margin-top: 7vh;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+@media (min-width: 992px) {
+  main .testimonials .container .content-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  main .testimonials .container .content-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+main .testimonials .container .content-box .content {
+  width: 100%;
+  text-align: left;
+}
+main .testimonials .container .content-box .content span {
+  color: #f94d1c;
+  font-size: 0.8rem;
+  margin-right: 4px;
+  margin-bottom: 20px;
+}
+main .testimonials .container .content-box .content .person-info {
+  display: grid;
+  grid-template-areas: "image name" "image title";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+main .testimonials .container .content-box .content .person-info img {
+  grid-area: image;
+  margin-right: 20px;
+}
+main .testimonials .container .content-box .content .person-info h4 {
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+main .testimonials .container .content-box .content .person-info h3 {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+main .testimonials .container button {
+  margin-top: 7vh;
 }
 main .newsletter {
   background-color: #f0efe9;
