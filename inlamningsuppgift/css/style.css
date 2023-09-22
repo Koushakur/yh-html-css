@@ -707,11 +707,94 @@ main .studies .container button {
 }
 main .our-team {
   background-color: #edcf87;
-  padding: 9vh 0;
+  padding-top: 9vh;
+}
+main .our-team .title-box {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 7vh;
+}
+@media (min-width: 992px) {
+  main .our-team .title-box {
+    justify-content: space-between;
+    align-items: end;
+    text-align: left;
+    flex-direction: row;
+  }
+}
+main .our-team .title-box button {
+  outline: 1px solid black;
+  margin-top: 30px;
+}
+@media (min-width: 992px) {
+  main .our-team .title-box button {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+main .our-team #carouselTeam {
+  padding-bottom: 5vh;
+}
+main .our-team #carouselTeam .carousel-indicators button {
+  background-color: #191919;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  margin-bottom: -75px;
+}
+main .our-team #carouselTeam .carousel-inner .carousel-item .content-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  text-wrap: nowrap;
+}
+@media (min-width: 992px) {
+  main .our-team #carouselTeam .carousel-inner .carousel-item .content-box {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+}
+main .our-team #carouselTeam .carousel-inner .carousel-item .content-box .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2rem 2rem;
+  width: 100%;
+}
+main .our-team #carouselTeam .carousel-inner .carousel-item .content-box .content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 30px;
+  top: 0;
+}
+@media (min-width: 576px) {
+  main .our-team #carouselTeam .carousel-inner .carousel-item .content-box .content img {
+    height: 25vh;
+  }
+}
+@media (min-width: 992px) {
+  main .our-team #carouselTeam .carousel-inner .carousel-item .content-box .content img {
+    height: 38vh;
+  }
+}
+main .our-team #carouselTeam .carousel-inner .carousel-item .content-box .content p {
+  color: #191919;
+  font-size: inherit;
+  font-size: 0.75rem;
+}
+@media (min-width: 576px) {
+  main .our-team #carouselTeam .carousel-inner .carousel-item .content-box .content p {
+    font-size: 1rem;
+  }
 }
 main .testimonials {
   background-color: #edcf87;
-  padding: 9vh 0;
+  padding: 7vh 0 9vh;
 }
 main .testimonials .container {
   background-color: white;
@@ -823,14 +906,6 @@ main .newsletter .container form button {
     margin-top: 0;
   }
 }
-main #to-top {
-  display: none;
-  position: fixed;
-  right: 3vw;
-  bottom: 9vh;
-  height: 2.8rem;
-  width: 2.8rem;
-}
 
 footer {
   width: 100%;
@@ -867,6 +942,15 @@ footer .footer-lower .container .copyright-social .social a {
   color: white;
 }
 
+#to-top {
+  display: none;
+  position: fixed;
+  right: 3vw;
+  bottom: 9vh;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -884,9 +968,19 @@ h2 {
 
 h3 {
   color: #f94d1c;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 992px) {
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 h4 {

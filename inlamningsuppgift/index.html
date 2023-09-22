@@ -14,11 +14,16 @@
    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
    <!---->
 
-   <!-- CSS -->
+   <!-- CSS & Bootstrap -->
+   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
    <link rel="stylesheet" href="css/style.css">
    <!---->
+
 
    <!-- FontAwesome -->
    <script defer src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
@@ -372,7 +377,196 @@
       <!-- Meet Our Team -->
       <section class="our-team">
          <div class="container">
+            <!-- Title and button -->
+            <div class="title-box">
+               <div>
+                  <h3>Meet Our Team</h3>
+                  <h2>Experienced Team Members</h2>
+               </div>
+               <a href="#">
+                  <button class="btn-orange">Browse Team <span class="fa-solid fa-arrow-up-right ms-2"></span></button>
+               </a>
+            </div>
+
+            <!-- Carousel structure start -->
+            <div id="carouselTeam" class="carousel slide" data-bs-ride="carousel" data-ride="carousel">
+
+               <!-- Indicators -->
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="0" class="active"
+                     aria-label="Slide 1" aria-current="true"></button>
+                  <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="1"
+                     aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="2"
+                     aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="3"
+                     aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselTeam" data-bs-slide-to="4"
+                     aria-label="Slide 4"></button>
+               </div>
+
+               <!-- Carousel items -->
+               <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                     <div class="content-box">
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-01.jpg" alt="">
+                           <h4>Kristine Palmer</h4>
+                           <p>Chief Operations Officer</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/itay-verchik.jpg" alt="">
+                           <h4>Mark Aubri</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-03.jpg" alt="">
+                           <h4>Kimberly Hansen</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/the-connected-narrative.jpg" alt="">
+                           <h4>Justin Willoman</h4>
+                           <p>Senior Tech Consultant</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!---->
+
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                     <div class="content-box">
+
+                        <div class="content">
+                           <img src="img/photos/itay-verchik.jpg" alt="">
+                           <h4>Mark Aubri</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-01.jpg" alt="">
+                           <h4>Kristine Palmer</h4>
+                           <p>Chief Operations Officer</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-03.jpg" alt="">
+                           <h4>Kimberly Hansen</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/the-connected-narrative.jpg" alt="">
+                           <h4>Justin Willoman</h4>
+                           <p>Senior Tech Consultant</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!---->
+
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                     <div class="content-box">
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-01.jpg" alt="">
+                           <h4>Kristine Palmer</h4>
+                           <p>Chief Operations Officer</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/itay-verchik.jpg" alt="">
+                           <h4>Mark Aubri</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/the-connected-narrative.jpg" alt="">
+                           <h4>Justin Willoman</h4>
+                           <p>Senior Tech Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-03.jpg" alt="">
+                           <h4>Kimberly Hansen</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!---->
+
+                  <!-- Slide 4 -->
+                  <div class="carousel-item">
+                     <div class="content-box">
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-03.jpg" alt="">
+                           <h4>Kimberly Hansen</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/itay-verchik.jpg" alt="">
+                           <h4>Mark Aubri</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/the-connected-narrative.jpg" alt="">
+                           <h4>Justin Willoman</h4>
+                           <p>Senior Tech Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-01.jpg" alt="">
+                           <h4>Kristine Palmer</h4>
+                           <p>Chief Operations Officer</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!---->
+
+                  <!-- Slide 5 -->
+                  <div class="carousel-item">
+                     <div class="content-box">
+
+                        <div class="content">
+                           <img src="img/photos/itay-verchik.jpg" alt="">
+                           <h4>Mark Aubri</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-01.jpg" alt="">
+                           <h4>Kristine Palmer</h4>
+                           <p>Chief Operations Officer</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/the-connected-narrative.jpg" alt="">
+                           <h4>Justin Willoman</h4>
+                           <p>Senior Tech Consultant</p>
+                        </div>
+
+                        <div class="content">
+                           <img src="img/photos/christina-wocintechchat-com-03.jpg" alt="">
+                           <h4>Kimberly Hansen</h4>
+                           <p>Senior Consultant</p>
+                        </div>
+                     </div>
+                  </div>
+                  <!---->
+
+               </div>
+            </div>
+
          </div>
+
       </section>
 
       <!-- Testimonials -->
@@ -451,20 +645,18 @@
          </div>
       </section>
 
-
       <div style="height: 500px; background-color: black;"></div>
 
-
-      <!-- Jump to top floating button -->
-      <a href="#">
-         <button class="btn-orange round" id="to-top"><span class="fa-solid fa-arrow-up"></span></button>
-      </a>
    </main>
 
    <!-- <footer>
       <span class="fa-regular fa-copyright me-1"></span>2013-2023 Great Design&trade;
    </footer> -->
 
+   <!-- Jump to top floating button -->
+   <a href="#">
+      <button class="btn-orange round" id="to-top"><span class="fa-solid fa-arrow-up"></span></button>
+   </a>
    <script src="js/to-top.js"></script>
 </body>
 

@@ -186,7 +186,8 @@ main {
       background-image: url("../img/background/background-lines.svg");
       background-repeat: no-repeat;
       background-position: bottom left;
-      animation: bg-size-bounce 10s infinite ease-in-out,
+      animation:
+         bg-size-bounce 10s infinite ease-in-out,
          bg-enter-left 1.0s ease-in-out;
 
       .container {
@@ -739,13 +740,120 @@ main {
    .our-team {
       background-color: $color-darker-yellow;
 
-      padding: $gap-large 0;
+      padding-top: $gap-large;
+
+      .title-box {
+         display: flex;
+         // align-items: end;
+         text-align: center;
+         flex-direction: column;
+
+         margin-bottom: $gap-medium;
+
+         @media (min-width: $bs-l) {
+            justify-content: space-between;
+            align-items: end;
+            text-align: left;
+            flex-direction: row;
+         }
+
+         button {
+            outline: 1px solid black;
+            margin-top: 30px;
+
+            @media (min-width: $bs-l) {
+               margin-top: 0;
+               margin-bottom: 10px;
+            }
+         }
+      }
+
+      #carouselTeam {
+
+         padding-bottom: $gap-small;
+
+         .carousel-indicators {
+
+            button {
+               background-color: $color-nearly-black;
+
+               border-radius: 100%;
+               width: 12px;
+               height: 12px;
+
+               margin: 0 8px;
+               margin-bottom: -75px;
+            }
+         }
+
+         .carousel-inner {
+
+            .carousel-item {
+
+               .content-box {
+                  display: grid;
+                  // justify-content: space-between;
+
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(2, 1fr);
+
+                  gap: 15px;
+
+                  text-wrap: nowrap;
+
+                  @media (min-width: $bs-l) {
+                     grid-template-columns: repeat(4, 1fr);
+                     grid-template-rows: auto;
+
+                     gap: 30px;
+                  }
+
+                  .content {
+                     display: grid;
+
+                     grid-template-columns: 1fr;
+                     grid-template-rows: 1fr 2rem 2rem;
+
+                     width: 100%;
+
+                     img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 15vh;
+                        margin-bottom: 30px;
+                        top: 0;
+
+                        @media (min-width: $bs-s) {
+                           height: 25vh;
+                        }
+
+                        @media (min-width: $bs-l) {
+                           height: 38vh;
+                        }
+                     }
+
+                     p {
+                        color: $color-nearly-black;
+
+                        font-size: inherit;
+
+                        font-size: 0.75rem;
+
+                        @media (min-width: $bs-s) {
+                           font-size: 1rem;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
    }
 
    .testimonials {
       background-color: $color-darker-yellow;
 
-      padding: $gap-large 0;
+      padding: $gap-medium 0 $gap-large;
 
       .container {
          background-color: white;
@@ -837,6 +945,11 @@ main {
       }
    }
 
+   // Articles & News
+   .news {
+      //
+   }
+
    // Newsletter signup
    .newsletter {
       background-color: $color-background-grey;
@@ -887,17 +1000,6 @@ main {
          }
 
       }
-   }
-
-   // Jump to top of page button
-   #to-top {
-      display: none;
-      position: fixed;
-      right: 3vw;
-      bottom: $gap-large;
-
-      height: calc($button-height * 0.8);
-      width: calc($button-height * 0.8);
    }
 }
 
@@ -951,6 +1053,17 @@ footer {
 
 }
 
+// Jump to top of page button
+#to-top {
+   display: none;
+   position: fixed;
+   right: 3vw;
+   bottom: $gap-large;
+
+   height: calc($button-height * 0.8);
+   width: calc($button-height * 0.8);
+}
+
 // Section titles
 h2 {
    font-size: 1.5rem;
@@ -962,17 +1075,24 @@ h2 {
 
    @media (min-width: $bs-l) {
       font-size: 2.8rem;
-      // font-weight: 700;
    }
 }
 
 // Red section highlight
 h3 {
    color: $color-accent-red;
-   font-size: 1.2rem;
+   font-size: 1.0rem;
    font-weight: 600;
 
    margin-bottom: 20px;
+
+   @media (min-width: $bs-m) {
+      font-size: 1.1rem;
+   }
+
+   @media (min-width: $bs-l) {
+      font-size: 1.2rem;
+   }
 }
 
 // Section content titles
