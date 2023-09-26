@@ -744,7 +744,6 @@ main {
 
       .title-box {
          display: flex;
-         // align-items: end;
          text-align: center;
          flex-direction: column;
 
@@ -758,7 +757,7 @@ main {
          }
 
          button {
-            outline: 1px solid black;
+            outline: 1px solid $color-nearly-black;
             margin-top: 30px;
 
             @media (min-width: $bs-l) {
@@ -792,7 +791,6 @@ main {
 
                .content-box {
                   display: grid;
-                  // justify-content: space-between;
 
                   grid-template-columns: repeat(2, 1fr);
                   grid-template-rows: repeat(2, 1fr);
@@ -847,6 +845,16 @@ main {
                }
             }
          }
+
+         // .carousel-control-prev,
+         // .carousel-control-next {
+         //    color: $color-nearly-black;
+         //    background-color: white;
+         //    font-size: 1.5rem;
+         //    // margin-top: calc($button-height * -1.1);
+         //    margin: 13% 10px;
+         //    // outline: 1px solid white;
+         // }
       }
    }
 
@@ -947,7 +955,7 @@ main {
 
    // Articles & News
    .news {
-      //
+      color: #00000033;
    }
 
    // Newsletter signup
@@ -1002,6 +1010,7 @@ main {
       }
    }
 }
+
 
 footer {
    width: 100%;

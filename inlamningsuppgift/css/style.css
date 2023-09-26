@@ -724,7 +724,7 @@ main .our-team .title-box {
   }
 }
 main .our-team .title-box button {
-  outline: 1px solid black;
+  outline: 1px solid #191919;
   margin-top: 30px;
 }
 @media (min-width: 992px) {
@@ -859,6 +859,9 @@ main .testimonials .container .content-box .content .person-info h3 {
 }
 main .testimonials .container button {
   margin-top: 7vh;
+}
+main .news {
+  color: rgba(0, 0, 0, 0.2);
 }
 main .newsletter {
   background-color: #f0efe9;
