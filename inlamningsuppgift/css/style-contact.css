@@ -82,8 +82,14 @@ main .contact-info {
 }
 main .contact-info .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 25px;
+  text-wrap: nowrap;
+}
+@media (min-width: 992px) {
+  main .contact-info .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 main .contact-info .container .content {
   border: 2px solid #f0efe9;
