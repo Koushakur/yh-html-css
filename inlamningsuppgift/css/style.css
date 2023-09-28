@@ -1178,3 +1178,11 @@ textarea {
 .s404 main img {
   padding: 50px;
 }
+
+.carousel-indicators [data-bs-target] {
+  opacity: 0.2;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}

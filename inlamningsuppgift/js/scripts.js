@@ -12,18 +12,26 @@ window.addEventListener('scroll',
 );
 //
 
-// Loading the footer on page load
-function loadFooter() {
+// Used for loading the footer and header on page load
+function loadHTML(docName) {
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange =
       function () {
          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("footer").innerHTML = this.responseText;
+            document.getElementById(docName).innerHTML = this.responseText;
+
+            // If the header, check which page and set its nav item as current
+            if (docName == "header") {
+               var fileName = location.pathname.split("/").slice(-1).toString().split('.')[0];
+               var tElem = document.getElementById(fileName);
+               if (tElem != null) { tElem.classList.add("current"); }
+            }
          }
       };
-   xhttp.open("GET", "footer.html", true);
+   xhttp.open("GET", docName + ".html", true);
    xhttp.send();
 }
 
-document.addEventListener("loadstart", loadFooter());
+document.addEventListener("loadstart", loadHTML("header"));
+document.addEventListener("loadstart", loadHTML("footer"));
 //

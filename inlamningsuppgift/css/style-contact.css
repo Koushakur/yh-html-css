@@ -88,7 +88,7 @@ main .contact-info .container {
 }
 @media (min-width: 992px) {
   main .contact-info .container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 main .contact-info .container .content {
