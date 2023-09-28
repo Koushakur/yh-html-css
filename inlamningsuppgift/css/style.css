@@ -190,15 +190,24 @@ header .container .csna .navigation-account nav {
   }
 }
 header .container .csna .navigation-account nav a {
-  color: inherit;
-  text-decoration: none;
+  position: relative;
 }
 header .container .csna .navigation-account nav a.current {
-  text-decoration: underline;
-  text-decoration-style: double;
+  display: flex;
+  justify-content: center;
+}
+header .container .csna .navigation-account nav a.current::after {
+  content: "";
+  background-color: #191919;
+  position: absolute;
+  bottom: -2px;
+  width: 20px;
+  height: 4px;
+  border-radius: 10px;
 }
 header .container .csna .navigation-account nav a:hover {
   text-decoration: underline;
+  text-decoration-style: double;
 }
 header .container .csna .navigation-account .account-mobile {
   display: block;
