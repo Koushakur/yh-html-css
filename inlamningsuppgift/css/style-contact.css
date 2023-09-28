@@ -104,6 +104,9 @@ main .contact-info .container .content img {
 main .contact-info .container .content div {
   margin-left: 28%;
 }
+main .contact-info .container .content div a {
+  color: #5b5b5b;
+}
 main .message {
   margin-top: 7vh;
 }

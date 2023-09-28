@@ -106,7 +106,7 @@ header {
                   transition-duration: 0.3s;
 
                   &:hover {
-                     color: $color-darker-yellow;
+                     color: $color-yellow-darker;
                      text-shadow: 0px 0px 10px #6666ff;
                   }
                }
@@ -211,6 +211,12 @@ main {
 
             @media (min-width: $bs-xl) {
                display: block;
+
+               transition-duration: 0.5s;
+
+               &:hover {
+                  filter: drop-shadow(5px 5px 10px #00000033);
+               }
             }
          }
 
@@ -750,7 +756,7 @@ main {
    }
 
    .our-team {
-      background-color: $color-darker-yellow;
+      background-color: $color-yellow-darker;
 
       padding-top: $gap-large;
 
@@ -868,7 +874,7 @@ main {
    }
 
    .testimonials {
-      background-color: $color-darker-yellow;
+      background-color: $color-yellow-darker;
 
       padding: $gap-medium 0 $gap-large;
 
@@ -1126,10 +1132,9 @@ main {
    }
 }
 
-
 footer {
    width: 100%;
-   background-color: $color-footer-background;
+   background-color: $color-background-footer;
 
    .footer-upper {
       background-image: url("../img/background/background-lines-white-right.svg");
@@ -1147,7 +1152,7 @@ footer {
    }
 
    .footer-lower {
-      border-top: 1px solid $color-footer-text;
+      border-top: 1px solid $color-text-footer;
 
       .container {
 
@@ -1158,7 +1163,7 @@ footer {
             padding-top: 20px;
 
             p {
-               color: $color-footer-text;
+               color: $color-text-footer;
             }
 
             .social {
@@ -1235,7 +1240,7 @@ h4 {
 
 p {
    font-family: 'Atkinson Hyperlegible', sans-serif;
-   color: #5b5b5b;
+   color: $color-text-darkgrey;
 }
 
 button {
@@ -1310,7 +1315,7 @@ textarea {
    }
 
    &::placeholder {
-      color: $color-footer-text;
+      color: $color-text-footer;
    }
 
    &:focus {

@@ -251,6 +251,10 @@ main .showcase .container img {
 @media (min-width: 1200px) {
   main .showcase .container img {
     display: block;
+    transition-duration: 0.5s;
+  }
+  main .showcase .container img:hover {
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
   }
 }
 main .showcase .container .jumbo {
