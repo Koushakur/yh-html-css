@@ -77,11 +77,15 @@
          <div class="container">
             <h2>Leave us a message for any information.</h2>
 
-            <form action="" method="post">
-               <input required name="name" placeholder="Name*" autocomplete="name" maxlength="70">
-               <input required name="email" placeholder="Email*" autocomplete="email" maxlength="70" type="email">
-               <textarea required name="message" placeholder="Your Message*" id="message"></textarea>
-               <button class="btn-orange">Send Message<span class="fa-solid fa-arrow-up-right ms-2"></span></button>
+            <form method="post" id="sendMessage">
+               <input required name="name" placeholder="Name*" autocomplete="name"="Full name" maxlength="70">
+               <input required name="email" placeholder="Email*" autocomplete="email" title="E-Mail" maxlength="70"
+                  type="email">
+               <textarea required name="message" placeholder="Your Message*" title="Your message"
+                  id="message"></textarea>
+               <button title="Send message" class="btn-orange">
+                  Send Message<span class="fa-solid fa-arrow-up-right ms-2"></span>
+               </button>
             </form>
          </div>
       </section>
