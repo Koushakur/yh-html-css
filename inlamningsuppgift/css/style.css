@@ -267,20 +267,6 @@ main .showcase .container .jumbo .content {
   flex-direction: column;
   justify-items: center;
 }
-main .showcase .container .jumbo .content h1 {
-  font-size: 3em;
-  font-weight: bold;
-}
-@media (min-width: 768px) {
-  main .showcase .container .jumbo .content h1 {
-    font-size: 4em;
-  }
-}
-@media (min-width: 992px) {
-  main .showcase .container .jumbo .content h1 {
-    font-size: 5em;
-  }
-}
 main .showcase .container .jumbo .content p {
   font-size: 1em;
   margin-top: 1.5rem;
@@ -1052,19 +1038,17 @@ footer .footer-upper .container .company-info p {
 footer .footer-upper .container .content-box {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
 }
 @media (min-width: 576px) {
   footer .footer-upper .container .content-box {
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr 1fr;
-    justify-items: left;
   }
 }
 @media (min-width: 768px) {
   footer .footer-upper .container .content-box {
-    grid-template-columns: repeat(3, 1fr) auto;
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: space-between;
   }
 }
 footer .footer-upper .container .content-box .content {
@@ -1077,13 +1061,20 @@ footer .footer-upper .container .content-box .content {
 }
 footer .footer-upper .container .content-box .content h4 {
   color: white;
+  font-size: 1.2rem;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   footer .footer-upper .container .content-box .content h4 {
+    font-size: 1.3rem;
     margin-top: 20px;
     margin-bottom: 40px;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer-upper .container .content-box .content h4 {
+    font-size: 1.4rem;
   }
 }
 footer .footer-upper .container .content-box .content ul {
@@ -1105,7 +1096,8 @@ footer .footer-upper .container .content-box .content ul li a {
 }
 footer .footer-lower {
   border-top: 1px solid #5b5b5b;
-  padding-top: 20px;
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem;
 }
 footer .footer-lower .container .copyright-social {
   display: flex;
@@ -1145,6 +1137,21 @@ footer .footer-lower .container .copyright-social .social a:hover {
   bottom: 9vh;
   height: 2.8rem;
   width: 2.8rem;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 5em;
+  }
 }
 
 h2 {

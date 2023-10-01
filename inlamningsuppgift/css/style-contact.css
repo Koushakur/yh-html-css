@@ -72,7 +72,17 @@ main .sub-header {
   padding-bottom: 7.5vh;
 }
 main .sub-header h1 {
-  font-weight: 700;
+  font-size: 2.5rem;
+}
+@media (min-width: 576px) {
+  main .sub-header h1 {
+    font-size: 3em;
+  }
+}
+@media (min-width: 768px) {
+  main .sub-header h1 {
+    font-size: 3.5em;
+  }
 }
 main .contact-info {
   margin-top: 9vh;
@@ -120,19 +130,30 @@ main .message .container {
 }
 @media (min-width: 1200px) {
   main .message .container {
-    padding: 100px 150px;
+    padding: 9vh 150px;
   }
 }
 main .message .container h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main .message .container h2 {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  main .message .container h2 {
+    width: 45%;
+  }
 }
 main .message .container input {
-  display: block;
   width: 100%;
   margin-top: 15px;
 }
-main .message .container #message {
+main .message .container textarea {
   margin-top: 15px;
   height: 10rem;
   width: 100%;

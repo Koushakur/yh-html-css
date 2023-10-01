@@ -232,19 +232,6 @@ main {
                flex-direction: column;
                justify-items: center;
 
-               h1 {
-                  font-size: 3em;
-                  font-weight: bold;
-
-                  @media (min-width: $bs-m) {
-                     font-size: 4em;
-                  }
-
-                  @media (min-width: $bs-l) {
-                     font-size: 5em;
-                  }
-               }
-
                p {
                   font-size: 1em;
                   margin-top: 1.5rem;
@@ -1195,18 +1182,14 @@ footer {
 
             grid-template-columns: 1fr;
 
-            justify-items: center;
-
             @media (min-width: $bs-s) {
                grid-template-columns: 1fr auto;
                grid-template-rows: 1fr 1fr;
-
-               justify-items: left;
             }
 
             @media (min-width: $bs-m) {
-               grid-template-columns: repeat(3, 1fr) auto;
-               grid-template-rows: 1fr;
+               display: flex;
+               justify-content: space-between;
             }
 
             .content {
@@ -1219,12 +1202,20 @@ footer {
                h4 {
                   color: white;
 
+                  font-size: 1.2rem;
+
                   margin-top: 15px;
                   margin-bottom: 15px;
 
-                  @media (min-width: $bs-s) {
+                  @media (min-width: $bs-m) {
+                     font-size: 1.3rem;
+
                      margin-top: 20px;
                      margin-bottom: 40px;
+                  }
+
+                  @media (min-width: $bs-l) {
+                     font-size: 1.4rem;
                   }
                }
 
@@ -1255,7 +1246,8 @@ footer {
    .footer-lower {
       border-top: 1px solid $color-text-darkgrey;
 
-      padding-top: 20px;
+      padding-top: 1.5rem;
+      padding-bottom: 0.75rem;
 
       .container {
 
@@ -1307,6 +1299,19 @@ footer {
 
    height: calc($button-height * 0.8);
    width: calc($button-height * 0.8);
+}
+
+h1 {
+   font-size: 3em;
+   font-weight: bold;
+
+   @media (min-width: $bs-m) {
+      font-size: 4em;
+   }
+
+   @media (min-width: $bs-l) {
+      font-size: 5em;
+   }
 }
 
 // Section titles
