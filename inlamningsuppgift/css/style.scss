@@ -11,6 +11,8 @@ body {
    background-color: $color-white;
    font-family: 'Inter bold', sans-serif;
 
+   overflow-x: hidden;
+
    a {
       color: $color-nearly-black;
       text-decoration: none;
@@ -20,9 +22,6 @@ body {
 header {
    width: 100%;
    background-color: $color-background-grey;
-   display: flex;
-   justify-content: center;
-   align-content: center;
 
    padding: 1rem;
 
@@ -94,6 +93,8 @@ header {
 
                a {
                   color: inherit;
+
+                  transition-property: color, text-shadow;
                   transition-duration: 0.3s;
 
                   &:hover {
@@ -132,24 +133,49 @@ header {
                   &.current {
                      display: flex;
                      justify-content: center;
-                  }
 
-                  &.current::after {
-                     content: "";
-                     background-color: $color-nearly-black;
+                     &::after {
+                        content: "";
+                        background-color: $color-nearly-black;
 
-                     position: absolute;
-                     bottom: -2px;
+                        position: absolute;
+                        bottom: -2px;
 
-                     width: 20px;
-                     height: 4px;
-                     border-radius: 10px;
+                        width: 20px;
+                        height: 4px;
+                        border-radius: 10px;
+                     }
                   }
 
                   &:hover {
-                     text-decoration: underline;
-                     text-decoration-style: double;
+                     display: flex;
+                     justify-content: center;
+
+                     &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -12px;
+
+                        border-top: 10px solid $color-nearly-black;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+
+                        @keyframes arrow-entry {
+                           0% {
+                              opacity: 0;
+                              translate: 0 100%;
+                           }
+
+                           100% {
+                              opacity: 1;
+                              translate: 0 0%;
+                           }
+                        }
+
+                        animation: arrow-entry 0.3s ease;
+                     }
                   }
+
                }
             }
 
@@ -196,8 +222,9 @@ main {
          bg-enter-left 1.0s ease-in-out;
 
       .container {
-         animation: enter-right 0.8s ease-in-out;
          display: flex;
+
+         animation: enter-right 0.8s ease-in-out;
 
          img {
             display: none;
@@ -208,7 +235,7 @@ main {
                position: relative;
                right: -30px;
 
-               transition-duration: 0.5s;
+               transition: filter 0.5s;
 
                &:hover {
                   filter: drop-shadow(5px 5px 10px #00000033);
@@ -525,7 +552,17 @@ main {
 
             padding: 30px;
 
+            transition-property: background-color;
             transition-duration: 0.3s;
+
+            &:hover {
+               background-color: $color-yellow;
+            }
+
+            &:hover>.button-box>button {
+               color: $color-nearly-black;
+               background-color: $color-white;
+            }
 
             .fa-horizontal-rule {
                padding-top: 10px;
@@ -537,15 +574,6 @@ main {
                justify-content: right;
             }
 
-
-            &:hover {
-               background-color: $color-yellow;
-            }
-
-            &:hover>.button-box>button {
-               color: $color-nearly-black;
-               background-color: $color-white;
-            }
          }
       }
 
@@ -1235,6 +1263,15 @@ footer {
                      a {
                         color: $color-text-footer;
                         font-weight: bold;
+
+                        transition-property: color, text-shadow;
+                        transition-duration: 0.3s;
+
+                        &:hover {
+                           color: $color-yellow;
+
+                           text-shadow: 0 0 10px white;
+                        }
                      }
                   }
                }
@@ -1275,6 +1312,7 @@ footer {
                a {
                   color: white;
 
+                  transition-property: color, text-shadow;
                   transition-duration: 0.4s;
 
                   &:hover {
@@ -1299,6 +1337,13 @@ footer {
 
    height: calc($button-height * 0.8);
    width: calc($button-height * 0.8);
+
+   transition: filter 0.2s;
+   filter: drop-shadow(0 0 10px rgba($color-nearly-black, 0.25));
+
+   &:hover {
+      filter: drop-shadow(0 0 10px rgba($color-white, 0.25));
+   }
 }
 
 h1 {
@@ -1373,6 +1418,7 @@ button {
    font-family: 'Inter', sans-serif;
    font-weight: bold;
 
+   transition-property: color, background-color, border;
    transition-duration: 0.4s;
    color: $color-nearly-black;
 

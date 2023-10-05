@@ -9,7 +9,7 @@
    }
 
    100% {
-      translate: 0;
+      translate: 0vw;
       opacity: 100;
    }
 }
@@ -23,18 +23,6 @@
    100% {
       translate: 0 0;
       opacity: 100%;
-   }
-}
-
-@keyframes bounce-updown {
-
-   0%,
-   100% {
-      translate: 0 0vh;
-   }
-
-   50% {
-      translate: 0 -2vh;
    }
 }
 
