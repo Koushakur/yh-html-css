@@ -216,6 +216,7 @@ header .container .csna .navigation-account .account-mobile {
 }
 header .container .csna .navigation-account .account-mobile button {
   height: 1.75rem;
+  width: 2.3333333333rem;
 }
 @media (min-width: 768px) {
   header .container .csna .navigation-account .account-mobile {
@@ -696,9 +697,8 @@ main .studies .container .content-box .content h4 {
   margin-bottom: 15px;
 }
 main .studies .container .content-box a {
-  display: block;
-  text-align: right;
   font-size: 0.9rem;
+  font-weight: bold;
   border-top: 2px solid #f0efe9;
   padding-top: 15px;
   padding-right: 10px;
@@ -708,6 +708,15 @@ main .studies .container .content-box a {
     padding-top: 30px;
     padding-right: 20px;
   }
+}
+main .studies .container .content-box a div {
+  text-align: right;
+  transition-property: text-shadow, translate;
+  transition-duration: 0.5s;
+}
+main .studies .container .content-box a div:hover {
+  text-shadow: 0 2px 4px rgba(25, 25, 25, 0.5);
+  translate: 0 -2px;
 }
 main .studies .container button {
   margin-top: 5vh;
@@ -1113,8 +1122,7 @@ footer .footer-upper .container .content-box .content ul li a:hover {
 }
 footer .footer-lower {
   border-top: 1px solid #5b5b5b;
-  padding-top: 1.5rem;
-  padding-bottom: 0.75rem;
+  padding: 1.5rem 0;
 }
 footer .footer-lower .container .copyright-social {
   display: flex;
@@ -1127,6 +1135,9 @@ footer .footer-lower .container .copyright-social {
     justify-content: space-between;
     align-items: normal;
   }
+}
+footer .footer-lower .container .copyright-social p {
+  margin: 0;
 }
 footer .footer-lower .container .copyright-social .social {
   display: flex;
@@ -1155,7 +1166,8 @@ footer .footer-lower .container .copyright-social .social a:hover {
   bottom: 9vh;
   height: 2.8rem;
   width: 2.8rem;
-  transition: filter 0.2s;
+  transition-property: filter, background-color, color;
+  transition-duration: 0.3s;
   filter: drop-shadow(0 0 10px rgba(25, 25, 25, 0.25));
 }
 #to-top:hover {

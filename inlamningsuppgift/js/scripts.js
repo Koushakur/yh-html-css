@@ -32,6 +32,6 @@ function loadHTML(docName) {
    xhttp.send();
 }
 
-document.addEventListener("loadstart", loadHTML("header"));
-document.addEventListener("loadstart", loadHTML("footer"));
+document.addEventListener("DOMContentLoaded", loadHTML("header"));
+document.addEventListener("DOMContentLoaded", loadHTML("footer"));
 //

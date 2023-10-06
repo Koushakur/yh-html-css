@@ -185,6 +185,7 @@ header {
 
                button {
                   height: calc($button-height / 2);
+                  width: calc($button-height / 1.5);
                }
 
                @media (min-width: $bs-m) {
@@ -711,7 +712,6 @@ main {
             text-align: left;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            // grid-template-rows: 1fr 1fr;
             gap: 30px;
 
             margin-top: $gap-large;
@@ -746,10 +746,8 @@ main {
             }
 
             a {
-               display: block;
-               text-align: right;
-
                font-size: 0.9rem;
+               font-weight: bold;
 
                border-top: 2px solid $color-background-grey;
 
@@ -759,7 +757,17 @@ main {
                @media (min-width: $bs-l) {
                   padding-top: 30px;
                   padding-right: 20px;
+               }
 
+               div {
+                  text-align: right;
+                  transition-property: text-shadow, translate;
+                  transition-duration: 0.5s;
+
+                  &:hover {
+                     text-shadow: 0 2px 4px rgba($color-nearly-black, 0.5);
+                     translate: 0 -2px;
+                  }
                }
             }
          }
@@ -1283,8 +1291,7 @@ footer {
    .footer-lower {
       border-top: 1px solid $color-text-darkgrey;
 
-      padding-top: 1.5rem;
-      padding-bottom: 0.75rem;
+      padding: 1.5rem 0;
 
       .container {
 
@@ -1300,9 +1307,14 @@ footer {
                align-items: normal;
             }
 
+            p {
+               margin: 0;
+            }
+
             .social {
                display: flex;
                gap: 25px;
+
                margin-bottom: 10px;
 
                @media (min-width: $bs-m) {
@@ -1338,7 +1350,9 @@ footer {
    height: calc($button-height * 0.8);
    width: calc($button-height * 0.8);
 
-   transition: filter 0.2s;
+   transition-property: filter, background-color, color;
+   transition-duration: 0.3s;
+
    filter: drop-shadow(0 0 10px rgba($color-nearly-black, 0.25));
 
    &:hover {
